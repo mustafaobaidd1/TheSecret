@@ -1,10 +1,10 @@
-document.getElementById('imageInput').addEventListener('change', function() {
+document.getElementById('imageInput')?.addEventListener('change', function() {
     const label = document.querySelector('[data-js-label]');
     const fileName = this.files[0]?.name;
     label.textContent = fileName ? fileName : 'No file selected';
 });
 
-document.getElementById('category').addEventListener('change', function() {
+document.getElementById('category')?.addEventListener('change', function() {
     const subcategoryGroup = document.getElementById('subcategory-group');
     const subcategorySelect = document.getElementById('subcategory');
     
@@ -24,7 +24,7 @@ document.getElementById('category').addEventListener('change', function() {
     });
 });
 
-document.getElementById('previewButton').addEventListener('click', function() {
+document.getElementById('previewButton')?.addEventListener('click', function() {
     const fileInput = document.getElementById('imageInput');
     const file = fileInput.files[0];
     const title = document.getElementById('imageTitle').value;
@@ -46,11 +46,11 @@ document.getElementById('previewButton').addEventListener('click', function() {
     }
 });
 
-document.getElementById('showConfirmModal').addEventListener('click', function() {
+document.getElementById('showConfirmModal')?.addEventListener('click', function() {
     $('#confirmModal').modal('show');
 });
 
-document.getElementById('confirmUploadButton').addEventListener('click', function() {
+document.getElementById('confirmUploadButton')?.addEventListener('click', function() {
     const fileInput = document.getElementById('imageInput');
     const file = fileInput.files[0];
     const title = document.getElementById('imageTitle').value;
@@ -139,7 +139,7 @@ function validateInput() {
 
 
 // clearStorageButton
-document.getElementById('clearStorageButton').addEventListener('click', function() {
+document.getElementById('clearStorageButton')?.addEventListener('click', function() {
     // Clear specific items from localStorage
     // localStorage.removeItem('sharedImagesQuickEasy_drwo1');
     // localStorage.removeItem('sharedImagesQuickEasy_drwo2');
